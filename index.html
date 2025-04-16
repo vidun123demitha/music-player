@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects"></div>
+    <div class="container">
+        <header>
+            <h1>Modern Music Player</h1>
+        </header>
+        <div class="description">
+            <p>Designed & Developed by <span>VIDUN DEMITHA</span></p>
+        </div>
+        <div class="controls">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search songs by name..." onkeyup="searchSongs()">
+            </div>
+            <div class="playback-controls">
+                <button id="loopBtn" onclick="toggleLoop()">Loop</button>
+                <button id="queueBtn" onclick="toggleQueue()">Queue</button>
+            </div>
+        </div>
+        <div id="songList" class="song-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

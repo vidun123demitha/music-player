@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4a);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Effects (Constellation Style with Animation) */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2a1a4a, #1e1e2f, #3a1c71);
+    z-index: -1;
+}
+
+.background-effects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"%3E%3Ccircle cx="200" cy="150" r="3" fill="white"%3E%3Canimate attributeName="cx" values="200;220;200" dur="10s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="150;170;150" dur="10s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="300" cy="250" r="3" fill="white"%3E%3Canimate attributeName="cx" values="300;320;300" dur="12s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="250;270;250" dur="12s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="400" cy="100" r="3" fill="white"%3E%3Canimate attributeName="cx" values="400;420;400" dur="8s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="100;120;100" dur="8s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="600" cy="300" r="3" fill="white"%3E%3Canimate attributeName="cx" values="600;620;600" dur="11s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="300;320;300" dur="11s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="800" cy="200" r="3" fill="white"%3E%3Canimate attributeName="cx" values="800;820;800" dur="9s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="200;220;200" dur="9s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="1000" cy="350" r="3" fill="white"%3E%3Canimate attributeName="cx" values="1000;1020;1000" dur="13s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="350;370;350" dur="13s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="150" cy="500" r="3" fill="white"%3E%3Canimate attributeName="cx" values="150;170;150" dur="10s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="500;520;500" dur="10s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="350" cy="450" r="3" fill="white"%3E%3Canimate attributeName="cx" values="350;370;350" dur="12s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="450;470;450" dur="12s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="500" cy="600" r="3" fill="white"%3E%3Canimate attributeName="cx" values="500;520;500" dur="8s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="600;620;600" dur="8s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="700" cy="550" r="3" fill="white"%3E%3Canimate attributeName="cx" values="700;720;700" dur="11s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="550;570;550" dur="11s" repeatCount="indefinite"/%3E%3C/circle%3E%3Ccircle cx="900" cy="650" r="3" fill="white"%3E%3Canimate attributeName="cx" values="900;920;900" dur="9s" repeatCount="indefinite"/%3E%3Canimate attributeName="cy" values="650;670;650" dur="9s" repeatCount="indefinite"/%3E%3C/circle%3E%3Cpolyline points="200,150 300,250 400,100 600,300"/%3E%3Cpolyline points="600,300 800,200 1000,350"/%3E%3Cpolyline points="150,500 350,450 500,600"/%3E%3Cpolyline points="500,600 700,550 900,650"/%3E%3C/svg%3E');
+    opacity: 0.7;
+}
+
+/* Header Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(145deg, rgba(255, 111, 97, 0.1), rgba(215, 109, 119, 0.1));
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Description Section */
+.description {
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.description span {
+    color: #ff6f61;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+@media (max-width: 768px) {
+    .description p {
+        font-size: 1rem;
+    }
+}
+
+/* Controls Section (Search and Playback Buttons) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.search-bar {
+    flex: 1;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.6);
+}
+
+.playback-controls {
+    display: flex;
+    gap: 15px;
+}
+
+#loopBtn, #queueBtn {
+    background: linear-gradient(145deg, #ff6f61, #d76d77);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#loopBtn.active, #queueBtn.active {
+    background: linear-gradient(145deg, #3a1c71, #ff6f61);
+    box-shadow: 0 0 15px rgba(215, 109, 119, 0.8);
+}
+
+#loopBtn:hover, #queueBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.8);
+}
+
+@media (max-width: 768px) {
+    #loopBtn, #queueBtn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Song List and Bars */
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.song-bar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(215, 109, 119, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song-bar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(215, 109, 119, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.song-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.song-details {
+    flex: 1;
+    min-width: 150px;
+}
+
+.song-info h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.song-info p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Playtime Bar with Countdown (Aligned) */
+.playtime-container {
+    position: relative;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.playtime-bar-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    touch-action: none; /* Prevent scrolling on touch */
+}
+
+.playtime-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6f61, #ffaf7b);
+    border-radius: 10px;
+    position: relative;
+    transition: width 0.1s linear;
+}
+
+.playtime-bar::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.time-display {
+    font-size: 0.8rem;
+    color: #e0e0e0;
+    text-align: center;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .song-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .song-info {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .song-details {
+        min-width: 100%;
+    }
+
+    .playtime-container {
+        width: 100%;
+    }
+
+    .song-info h3 {
+        font-size: 1rem;
+    }
+
+    .song-info p {
+        font-size: 0.8rem;
+    }
+
+    .time-display {
+        font-size: 0.7rem;
+    }
+}
+
+.song-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn {
+    background: linear-gradient(145deg, #ff6f61, #d76d77);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.8);
+}
+
+.control-btn.video-btn {
+    background: linear-gradient(145deg, #ffaf7b, #d76d77);
+}
+
+.control-btn.lyrics-btn {
+    background: linear-gradient(145deg, #3a1c71, #ff6f61);
+}
+
+@media (max-width: 768px) {
+    .song-controls {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .control-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Volume Control */
+.volume-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-icon {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.volume-bar-container {
+    width: 100px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.volume-bar {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, #ff6f61, #ffaf7b);
+    border-radius: 10px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.volume-bar::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: glow 1.5s infinite;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .volume-bar-container {
+        width: 80px;
+        height: 6px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Lyrics Popup */
+.lyrics-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.lyrics-content {
+    background: linear-gradient(135deg, #3a1c71, #d76d77);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(215, 109, 119, 0.7);
+    text-align: center;
+}
+
+.lyrics-content h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.lyrics-content pre {
+    white-space: pre-wrap;
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.lyrics-content button {
+    margin-top: 15px;
+    background: linear-gradient(145deg, #ff6f61, #d76d77);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.lyrics-content button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .lyrics-content {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .lyrics-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .lyrics-content pre {
+        font-size: 0.9rem;
+    }
+
+    .lyrics-content button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
